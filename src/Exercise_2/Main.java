@@ -31,6 +31,7 @@ public class Main {
             int elem = reversedList.get(i);
             System.out.println(elem);
         }
+        customPrint(intList, false);
     }
     static void populateList(ArrayList x, int n) {
         for (int i=0;i<n;i++) {
@@ -45,5 +46,19 @@ public class Main {
         Collections.sort(x);
         Collections.reverse(x);
         return x;
+    }
+    static void customPrint (ArrayList x, boolean y){
+        System.out.println("valori dispari");
+        if (y){
+            for (int i=0; i<x.size();i=i+2) {
+                int elem = (int) x.get(i);
+                System.out.println(elem);
+            }
+        } else {
+            for (int i=1; i<x.size();i=i+2) {
+                int elem = (int) x.get(i);
+                System.out.println(elem);
+            }
+        }
     }
 }
